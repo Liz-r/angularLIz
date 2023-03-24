@@ -1,0 +1,30 @@
+<div class="main">
+  <h1>Battle Field!</h1>
+  <h2>Choose your Pokemons:</h2>
+  <div class="poke">
+    <mat-form-field id="Pokemon1" appearance="fill">
+      <mat-label>Pokemon 1</mat-label>
+      <mat-select [formControl]="pokemonControl">
+        <mat-option>-- None --</mat-option>
+          <mat-option *ngFor="let pokemon of pokemons" [value]="pokemon.name">
+            {{pokemon.name | lowerCaseCustom}}
+          </mat-option>
+      </mat-select> 
+    </mat-form-field>
+
+    <h3>VS</h3>
+
+    <mat-form-field id="Pokemon2" appearance="fill">
+      <mat-label>Pokemon 2</mat-label>
+      <mat-select [formControl]="pokemonControl">
+        <mat-option>-- None --</mat-option>
+          <mat-option *ngFor="let pokemon of pokemons" [value]="pokemon.name">
+            {{pokemon.name}}
+          </mat-option> 
+      </mat-select> 
+    </mat-form-field>
+  </div>
+
+<app-meme-card></app-meme-card>
+
+</div>

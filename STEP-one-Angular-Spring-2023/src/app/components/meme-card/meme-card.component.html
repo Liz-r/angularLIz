@@ -1,0 +1,15 @@
+<mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{meme.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="meme.url" alt="Wait for the meme">
+    <mat-card-content>
+      <p>
+        
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="this.getMeme()" mat-button>Get Meme</button>
+    </mat-card-actions>
+  </mat-card>
+  
